@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RoutinePro</string>
+    <string name="welcome_user">¡Bienvenido, Usuario!</string>
+    <string name="app_subtitle">Tu entrenamiento, tu ritmo</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="main_description">Hoy es un gran día para entrenar y superar tus límites.</string>
+    <string name="btn_view_routines">Ver mis Rutinas</string>
+    <string name="routines_title">Mis Rutinas</string>
+    <string name="routine_chest">💪 Pecho y Tríceps</string>
+    <string name="routine_back">🚣 Espalda y Bíceps</string>
+    <string name="routine_legs">🍗 Piernas</string>
+    <string name="error_empty_fields">Por favor, completa todos los campos</string>
+</resources>
