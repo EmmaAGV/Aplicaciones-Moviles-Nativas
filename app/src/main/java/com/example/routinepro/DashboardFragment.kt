@@ -178,10 +178,44 @@ class DashboardFragment : Fragment() {
                         Vitales para el funcionamiento hormonal. Incluye aguacate, nueces y aceite de oliva.
                     """.trimIndent()
                     "🍴 Menú del Día" -> """
-                        Ejemplo de Menú
-                        🍳 Desayuno: Avena y yogur.
-                        🍱 Almuerzo: Pollo y arroz integral.
-                        🍽️ Cena: Revuelto de huevos con camote.
+                        📅 MENÚ SALUDABLE SEMANAL
+                        
+                        LUNES:
+                        🍳 Tortilla espinacas/tomate.
+                        🍱 Pollo plancha, arroz integral, ensalada.
+                        🍽️ Pescado horno con vegetales.
+                        
+                        MARTES:
+                        🍳 Avena con fresas/plátano.
+                        🍱 Garbanzos, espinacas y quinoa.
+                        🍽️ Crema de verduras con queso fresco.
+                        
+                        MIÉRCOLES:
+                        🍳 Yogur griego con nueces y chía.
+                        🍱 Fajitas res magra con pimientos.
+                        🍽️ Ensalada quinoa con atún y aguacate.
+                        
+                        JUEVES:
+                        🍳 Tostadas integrales con aguacate y huevo.
+                        🍱 Lentejas guisadas con vegetales.
+                        🍽️ Pollo desmechado con ensalada verde.
+                        
+                        VIERNES:
+                        🍳 Batido verde (espinaca, manzana, jengibre).
+                        🍱 Pescado plancha con puré de calabaza.
+                        🍽️ Mini pizzas de berenjena o portobello.
+                        
+                        SÁBADO:
+                        🍳 Pancakes de avena y plátano.
+                        🍱 Cerdo magro con papas al vapor.
+                        🍽️ Wrap integral de pollo y hummus.
+                        
+                        DOMINGO:
+                        🍳 Huevos revueltos con champiñones.
+                        🍱 Arroz con pollo (versión saludable).
+                        🍽️ Sopa clara de pollo o ensalada caprese.
+                        
+                        💡 TIP: Cocina arroz y quinoa el domingo (Batch Cooking) para ahorrar tiempo.
                     """.trimIndent()
                     else -> item.content
                 }
