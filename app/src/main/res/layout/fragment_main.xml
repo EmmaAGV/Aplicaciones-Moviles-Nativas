@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/onboardingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:progress="30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackThickness="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/onboardingProgress"
+        app:layout_constraintBottom_toTopOf="@id/btnFinish">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡Hagamos tu plan!"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completa estos datos para personalizar tu experiencia."
+                android:alpha="0.7"
+                android:layout_marginTop="8dp" />
+
+            <!-- Age & Gender -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#10000000">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Edad">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RadioGroup
+                        android:id="@+id/rgGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+                        <RadioButton android:id="@+id/rbMale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hombre" android:checked="true" />
+                        <RadioButton android:id="@+id/rbFemale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mujer" android:layout_marginStart="16dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Current Weight & Height -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#10000000">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Peso (kg)">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:hint="Altura (cm)">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Objective -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Cuál es tu objetivo principal?"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <RadioGroup
+                android:id="@+id/rgGoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <RadioButton android:id="@+id/rbLoseWeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Adelgazar" android:checked="true" />
+                <RadioButton android:id="@+id/rbFeelBetter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sentirme mejor" />
+                <RadioButton android:id="@+id/rbLowerStress" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bajar el estrés" />
+            </RadioGroup>
+
+            <!-- Level -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel de experiencia"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <Spinner
+                android:id="@+id/spinnerLevel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:entries="@array/fitness_levels" />
+
+            <!-- Placeholder for missing fields to avoid crashes -->
+            <RadioGroup android:id="@+id/rgSize" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"><RadioButton android:id="@+id/sizeM" android:checked="true" android:text="M"/></RadioGroup>
+            <RadioGroup android:id="@+id/rgBodyGoal" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"><RadioButton android:id="@+id/goalToned" android:checked="true" android:text="T"/></RadioGroup>
+            <RadioGroup android:id="@+id/rgActivityLevel" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"><RadioButton android:id="@+id/actMedio" android:checked="true" android:text="Medio"/></RadioGroup>
+            <CheckBox android:id="@+id/cbLegs" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbAbs" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbArms" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbBack" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbDog" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbKids" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbStairs" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <CheckBox android:id="@+id/cbHousework" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+            <Spinner android:id="@+id/spinnerLastExercise" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" android:entries="@array/exercise_history"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="24dp"
+        android:text="Crear mi Plan Profesional"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

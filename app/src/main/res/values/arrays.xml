@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fitness_levels">
+        <item>Principiante</item>
+        <item>Intermedio</item>
+        <item>Avanzado</item>
+    </string-array>
+
+    <string-array name="exercise_history">
+        <item>Hace menos de 1 mes</item>
+        <item>Hace 1-6 meses</item>
+        <item>Hace más de 1 año</item>
+        <item>Nunca he hecho ejercicio</item>
+    </string-array>
+</resources>
